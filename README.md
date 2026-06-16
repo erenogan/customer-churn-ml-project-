@@ -1,129 +1,108 @@
 Customer Churn Prediction System
 Machine Learning Approach for Predicting Customer Retention
-Customer Churn Prediction System is a machine learning project designed to analyze customer behavior and predict whether a telecom customer is likely to leave the service.
-The system is built using classical machine learning models and follows a complete data science pipeline including preprocessing, encoding, model training, evaluation, and prediction.
 
-Project Objective
-The main objective of this project is to identify customers who are at risk of churning by analyzing their demographic and service-related attributes such as:
+Customer Churn Prediction System, bir telekom şirketindeki müşterilerin hizmeti bırakıp bırakmayacağını tahmin etmek için geliştirilmiş bir makine öğrenmesi projesidir.
 
-Contract type
+Bu sistem, klasik makine öğrenmesi algoritmaları kullanılarak oluşturulmuş ve uçtan uca veri işleme, modelleme ve tahmin pipeline’ı içermektedir.
 
-Monthly charges
+Project Objective / Proje Amacı
 
-Total charges
+The main objective of this project is to identify customers who are likely to churn using behavioral and service-related data.
 
-Tenure
+Bu projenin amacı, müşteri davranışlarını analiz ederek hangi kullanıcıların hizmeti bırakma ihtimali olduğunu tahmin etmektir.
 
-Payment method
+Kullanılan temel değişkenler:
 
-The model helps understand customer behavior patterns and supports business retention strategies.
+Contract type (Sözleşme tipi)
+Monthly charges (Aylık ücret)
+Total charges (Toplam ücret)
+Tenure (Müşteri süresi)
+Payment method (Ödeme yöntemi)
+Methodology / Yöntem
 
-Methodology
-The project follows a structured machine learning workflow:
+The project follows a complete machine learning workflow.
 
-Data preprocessing and cleaning
+Proje aşağıdaki adımları içeren bir makine öğrenmesi süreci takip eder:
 
-Handling missing values in TotalCharges
-
-Feature encoding (categorical → numerical transformation)
-
-Train-test split
-
+Veri temizleme ve ön işleme
+Eksik verilerin işlenmesi (TotalCharges)
+Kategorik değişkenlerin encode edilmesi
+Train-test split işlemi
 Feature scaling (StandardScaler)
+Model eğitimi ve değerlendirme
+Gerçek müşteri verisi ile test
+Models Used / Kullanılan Modeller
 
-Model training and evaluation
-
-Customer-level prediction testing
-
-Models Used
 The following machine learning models were implemented:
 
+Bu projede aşağıdaki modeller kullanılmıştır:
+
 Logistic Regression (baseline model)
-
 Random Forest Classifier
-
-Random Forest (class-balanced version)
-
+Balanced Random Forest Classifier
 XGBoost Classifier
 
-Each model was evaluated and compared based on classification performance metrics.
+Modeller karşılaştırmalı olarak değerlendirilmiştir.
 
-Evaluation Metrics
-Model performance was measured using:
+Evaluation Metrics / Değerlendirme Metrikleri
 
-Accuracy
+Model performance was evaluated using:
 
+Model performansı şu metriklerle ölçülmüştür:
+
+Accuracy (Doğruluk)
 Precision
-
 Recall
-
 F1-score
-
 Confusion Matrix
-
 Classification Report
+Feature Importance Analysis / Özellik Analizi
 
-Feature Importance Analysis
-Random Forest model was used to extract feature importance values in order to understand the most influential factors affecting churn behavior.
-The most important features include:
+Random Forest modeli kullanılarak feature importance analizi yapılmıştır.
 
-Customer tenure
+En önemli faktörler:
 
-Monthly charges
+Tenure (Müşteri süresi)
+Monthly Charges (Aylık ücret)
+Contract Type (Sözleşme tipi)
+Payment Method (Ödeme yöntemi)
+Prediction System / Tahmin Sistemi
 
-Contract type
+The trained XGBoost model was tested with custom customer profiles.
 
-Payment method
+Eğitilen XGBoost modeli, manuel oluşturulan müşteri profilleri üzerinde test edilmiştir.
 
-Prediction System
-The trained XGBoost model was tested with manually created customer profiles to simulate real-world prediction scenarios.
-The system outputs:
+Sistem şu çıktıları üretir:
 
-Churn prediction (Yes / No)
-
-Probability of churn
-
-Risk level interpretation
-
-Technologies Used
+Churn prediction (Kayıp / Kalacak)
+Churn probability (Olasılık skoru)
+Risk analizi
+Technologies Used / Kullanılan Teknolojiler
 Python
-
 Pandas
-
 NumPy
-
 Scikit-learn
-
 XGBoost
-
 Matplotlib
-
-Key Insights
+Key Insights / Önemli Çıkarımlar
 Short tenure customers are more likely to churn
+High monthly charges increase churn probability
+Long-term contracts reduce churn risk
+Payment method affects customer behavior
+Future Improvements / Gelecek Geliştirmeler
+Hyperparameter tuning (GridSearchCV)
+Cross-validation
+Model deployment (FastAPI)
+Web dashboard interface
+Production ML pipeline
+Author / Yazar
 
-Higher monthly charges increase churn probability
-
-Long-term contracts significantly reduce churn risk
-
-Payment method is a strong behavioral indicator
-
-Future Improvements
-Hyperparameter tuning for XGBoost and Random Forest
-
-Cross-validation for better generalization
-
-Deployment using FastAPI
-
-Web interface for real-time prediction
-
-ML pipeline structuring (production-ready version)
-
-Author
 Eren Oğan
+Bilgisayar Mühendisliği Öğrencisi
+Machine Learning & Artificial Intelligence Interest
 
-Computer Engineering Student
+Project Summary / Proje Özeti
 
-Focus: Machine Learning & AI Systems
+This project demonstrates an end-to-end machine learning pipeline for customer churn prediction.
 
-Project Summary
-This project demonstrates a complete machine learning workflow for a real-world classification problem. It includes data preprocessing, multiple model training, evaluation, and practical prediction use cases for customer churn analysis.
+Bu proje, müşteri kaybı tahmini için uçtan uca bir makine öğrenmesi sürecini göstermektedir.
